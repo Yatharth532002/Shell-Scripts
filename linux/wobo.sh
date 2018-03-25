@@ -21,7 +21,8 @@ function get_lease_date(){
  echo $date
 }
 
-function get_mac_address(){
+function get_mac_address(); 
+{
  ip=$1
  mac=`cat $lease_file|grep -A 8 $ip|grep ethernet|uniq|sed -e "s/.*ethernet //g" -e "s/;//g"`
  echo $mac
